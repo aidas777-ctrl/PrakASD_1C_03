@@ -8,24 +8,28 @@ public class perulangan {
         String nim = input03.nextLine();
 
         int n = Integer.parseInt(nim.substring(Math.max(0, nim.length() - 2)));
+        
+       
         if (n < 10) {
             n += 10;
         }
-        int hitung = 0;
+        System.out.println("============");
+        System.out.println("Nilai n: " + n);
+        System.out.println("============");
         for (int i = 1; i <= n; i++) {
+          
             if (i != 6 && i != 10) {
                 if (i % 2 == 1) {
+                   
                     System.out.print("* ");
                 } else {
+                  
                     System.out.print(i + " ");
                 }
-                hitung++;
             }
         }
-      
-        System.out.println();  
-        System.out.println("n : "+ hitung);
+
+        input03.close();
     }
 }
-
 

@@ -7,14 +7,16 @@ public class pemilihan_nilai {
     public static void main(String[] args) {
         Scanner input03 = new Scanner(System.in);
         float tugas, kuis, uts, uas;
-
-        System.out.print("Nilai Tugas  : ");
+        
+        System.out.println("Program Menghitung Nilai Akhir");
+        System.out.println("==============================");
+        System.out.print("Masukkan Nilai Tugas  : ");
         tugas = input03.nextFloat();
-        System.out.print("Nilai Kuis   : ");
+        System.out.print("Masukkan Nilai Kuis   : ");
         kuis = input03.nextFloat();
-        System.out.print("Nilai UTS    : ");
+        System.out.print("NMasukkan ilai UTS    : ");
         uts = input03.nextFloat();
-        System.out.print("Nilai UAS    : ");
+        System.out.print("Masukkan Nilai UAS    : ");
         uas = input03.nextFloat();
 
         if (tugas < 0 || tugas > 100 || kuis < 0 || kuis > 100 || uts < 0 || uts > 100 || uas < 0 || uas > 100) {
