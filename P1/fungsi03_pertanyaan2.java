@@ -13,7 +13,6 @@ public class fungsi03_pertanyaan2 {
     kurangiStok(stockBunga, 4, 2); 
     kurangiStok(stockBunga, 4, 4); 
 
-
     tampilkanJumlahStok(stockBunga);
 }
 
@@ -56,5 +55,5 @@ static int penguranganJumlah(int jenisBunga) {
         default:
             return 0;
     }
-}
+ }
 }
