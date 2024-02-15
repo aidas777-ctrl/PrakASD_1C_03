@@ -11,7 +11,7 @@ public class perulangan {
         if (n < 10) {
             n += 10;
         }
-
+        int hitung = 0;
         for (int i = 1; i <= n; i++) {
             if (i != 6 && i != 10) {
                 if (i % 2 == 1) {
@@ -19,10 +19,12 @@ public class perulangan {
                 } else {
                     System.out.print(i + " ");
                 }
+                hitung++;
             }
         }
-
+      
         System.out.println();  
+        System.out.println("n : "+ hitung);
     }
 }
 
