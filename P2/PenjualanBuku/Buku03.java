@@ -14,8 +14,9 @@ public class Buku03 {
         halaman = hal;
         this.stok = stok;
         harga = har;
+
+
     }
-    
     void tampilInformasi() {
         System.out.println("Judul: " + judul);
         System.out.println("Pengarang: " + pengarang);

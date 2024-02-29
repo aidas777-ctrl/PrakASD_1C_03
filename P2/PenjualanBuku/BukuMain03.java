@@ -18,6 +18,12 @@ public class BukuMain03 {
         Buku03 bk2 = new Buku03("Self Reward", "Maheera Ayesha", 160, 29, 59000);
         bk2.terjual(11);
         bk2.tampilInformasi();
+
+
+        Buku03 bukuAida = new Buku03("Antara Aku dan Dia", "Aida Rahma", 200, 99, 50000);
+        bukuAida.terjual (98);
+        bukuAida.tampilInformasi();
+
         
     }
 }
