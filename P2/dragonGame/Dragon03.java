@@ -52,12 +52,12 @@ public class Dragon03 {
    }
 
    public static void main(String[] args) {
-      Scanner input03 = new Scanner(System.in);
+      Scanner Dragon03 = new Scanner(System.in);
       Dragon03 dragon = new Dragon03(5, 2, 10, 10);
 
       while (true) {
          System.out.print("Masukkan perintah (a/s/d/w): ");
-         char input = input03.next().charAt(0);
+         char input = Dragon03.next().charAt(0);
 
          switch (input) {
             case 'a':
