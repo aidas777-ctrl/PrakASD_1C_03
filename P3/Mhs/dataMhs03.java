@@ -24,4 +24,8 @@ public class dataMhs03 {
         System.out.println("Jenis Kelamin : " + jenisKelamin);
         System.out.println("Nilai IPK : " + IPK);
     }
+
+    public double getIPK() {
+        return IPK;
+    }
 }

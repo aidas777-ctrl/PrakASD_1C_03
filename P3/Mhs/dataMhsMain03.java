@@ -28,5 +28,27 @@ public class dataMhsMain03 {
             System.out.println("\nData Mahasiswa ke-" + (i + 1));
             mhsArray[i].tampilInfo();
         }
+
+        double totalIPK = 0;
+           for (dataMhs03 mhs : mhsArray) {
+                totalIPK += mhs.getIPK();
+           }
+           
+        double rataRataIPK = totalIPK / mhsArray.length;
+
+        System.out.println("=========================");
+        System.out.println("Rata-rata IPK: " + rataRataIPK);
+        System.out.println("=========================");
+
+        dataMhs03 mhsTerbaik = mhsArray[0];
+          for (int i = 1; i < mhsArray.length; i++) {
+
+             if (mhsArray[i].getIPK() > mhsTerbaik.getIPK()) {
+                mhsTerbaik = mhsArray[i];
+             }
+          }
+
+        System.out.println("\nMahasiswa dengan IPK terbesar:");
+        mhsTerbaik.tampilInfo();
     }
 }
