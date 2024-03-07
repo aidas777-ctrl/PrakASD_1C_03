@@ -26,7 +26,12 @@ public class Segitiga03 {
         sgArray[2] = new Segitiga03(15, 6);
         sgArray[3] = new Segitiga03(25, 10);
 
-        
+        for (int i = 0; i < sgArray.length; i++) {
+
+            System.out.println("Segitiga ke- " + i);
+            System.out.println("Luas : " + sgArray[i].HitungLuas());
+            System.out.println("Keliling : " + sgArray[i].HitungKeliling());
+        }
     }
 
 }
