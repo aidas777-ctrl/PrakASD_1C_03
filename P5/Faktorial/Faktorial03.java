@@ -1,12 +1,12 @@
 package P5.Faktorial;
 
 public class Faktorial03 {
-    int nilai;
+    public int nilai;
 
     int faktorialBF(int n) {
-        int fakto;
-        for(int i=0; i <=n; i++){
-            fakto = fakto * 1;
+        int fakto = 1;
+        for(int i=1; i <=n; i++){
+            fakto = fakto * i;
         }
         return fakto;
 
