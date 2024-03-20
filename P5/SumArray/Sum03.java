@@ -1,6 +1,7 @@
 package P5.SumArray;
 
 public class Sum03 {
+    
     int elemen;
     double keuntungan[], total;
 

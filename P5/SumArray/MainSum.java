@@ -16,7 +16,7 @@ public class MainSum {
         for (int i = 0; i < sm.elemen; i++) {
             System.out.print("Masukkan untung bulan ke - " + (i + 1) + " : ");
             sm.keuntungan[i] = aida03.nextDouble();
-        }
+         }
 
         System.out.println("============================================================");
         System.out.println("Algoritma Brute Force");
