@@ -32,6 +32,5 @@ public class MainPangkat03 {
                     + png[i].pangkatDC(png[i].nilai, png[i].pangkat));
             System.out.println();
         }
-
     }
 }
