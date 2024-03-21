@@ -13,20 +13,21 @@ public class Sum03 {
 
     double totalBF(double arr[]) {
         for (int i = 0; i < elemen; i++) {
-            total += keuntungan[i];
+            total = total + arr[i];
         }
         return total;
     }
 
-    double totalDC(int l, int r) {
+    double totalDC(double arr[], int l, int r) {
         if (l == r) {
-            return keuntungan[l];
-        } else if (l < r) {
-            int mid = l + (r - l) / 2;
-            double lsum = totalDC(l, mid);
-            double rsum = totalDC(mid + 1, r);
-            return lsum + rsum;
+            return arr[l];
+        } else if ( l < r){ 
+            int mid = (l + r) / 2;
+            double lsum = totalDC(arr,l, mid-1);
+            double rsum = totalDC(arr,mid + 1, r);
+            return lsum + rsum + arr[mid];
         }
         return 0;
+        }
     }
-}
+
