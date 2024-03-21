@@ -2,7 +2,7 @@ package P5.SumArray;
 
 import java.util.Scanner;
 
-public class MainSum {
+public class MainSum03 {
     public static void main(String[] args) {
         Scanner aida03 = new Scanner(System.in);
 
@@ -20,9 +20,11 @@ public class MainSum {
 
         System.out.println("============================================================");
         System.out.println("Algoritma Brute Force");
-        System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah = " + sm.totalBF(sm.keuntungan));
+        System.out.println("Total keuntungan perusahaan selama " + sm.elemen +
+                           " bulan adalah = " + sm.totalBF(sm.keuntungan));
         System.out.println("============================================================");
         System.out.println("Algoritma Divide Conquer");
-        System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah = " + sm.totalDC(0, sm.elemen - 1));
+        System.out.println("Total keuntungan perusahaan selama " + sm.elemen + 
+                           " bulan adalah = " + sm.totalDC(0, sm.elemen - 1));
     }
 }
