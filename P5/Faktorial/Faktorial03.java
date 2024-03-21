@@ -4,12 +4,12 @@ public class Faktorial03 {
     public int nilai;
 
     int faktorialBF(int n) {
-        int fakto = 1;
-        for(int i=1; i <=n; i++){
-            fakto = fakto * i;
+        if (n == 0 || n ==1) {
+            return 1;
+        }else {
+            int fakto = n * faktorialBF(n - 1);
+            return fakto;
         }
-        return fakto;
-
     }
 
     int faktorialDC (int n){
