@@ -28,6 +28,6 @@ public class Sum03 {
             return lsum + rsum + arr[mid];
         }
         return 0;
-        }
+      }
     }
 
