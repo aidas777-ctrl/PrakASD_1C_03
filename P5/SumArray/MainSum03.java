@@ -8,22 +8,37 @@ public class MainSum03 {
 
         System.out.println("============================================================");
         System.out.println("Program Menghitung Keuntungan Total (Satuan Juta. Misal 5.9)");
-        System.out.print("Masukkan Jumlah Bulan : ");
-        int elm = aida03.nextInt();
+        System.out.print("Masukkan Jumlah Perusahaan : ");
+        int jmlPerusahaan = aida03.nextInt();
 
-        Sum03 sm = new Sum03(elm);
-        System.out.println("============================================================");
-        for (int i = 0; i < sm.elemen; i++) {
-            System.out.print("Masukkan untung bulan ke - " + (i + 1) + " : ");
-            sm.keuntungan[i] = aida03.nextDouble();
-         }
+        Sum03 sm = new Sum03(jmlPerusahaan);
+
+        for (int i = 0; i < jmlPerusahaan; i++) {
+            System.out.println("Masukkan Jumlah Bulan untuk perusahaan " + (i + 1));
+            int jmlBulan = aida03.nextInt();
+            sm.Keuntungan(i, jmlBulan);
+
+            System.out.println("Masukkan Data Untung untuk Perusahaan " + (i + 1));
+            for (int j = 0; j < jmlBulan; j++) {
+                System.out.print("Masukkan keuntungan pada bulan ke-" + (j + 1) + " : ");
+                double untung = aida03.nextDouble();
+                sm.keuntungan[i][j] = untung;
+            }
+        }
 
         System.out.println("============================================================");
         System.out.println("Algoritma Brute Force");
-        System.out.println("Total keuntungan perusahaan selama " + sm.elemen +
-                           " bulan adalah = " + sm.totalBF(sm.keuntungan));
+        for (int i = 0; i < jmlPerusahaan; i++) {
+            System.out.println("Total keuntungan perusahaan " + (i + 1) + " selama " + sm.jmlBulan[i]
+                    + " bulan adalah : " + sm.totalBF(i));
+        }
+
         System.out.println("============================================================");
         System.out.println("Algoritma Divide Conquer");
-        System.out.printf("Total keuntungan perusahaan selama  %d bulan adalah %.2f\n " ,sm.elemen, sm.totalDC(sm.keuntungan,0, sm.elemen - 1));
+        for (int i = 0; i < jmlPerusahaan; i++) {
+            System.out.println("Total keuntungan perusahaan " + (i + 1) + " selama " + sm.jmlBulan[i]
+                    + " bulan adalah : " + sm.totalDC(i, 0, sm.jmlBulan[i] - 1));
+        }
+
     }
 }
