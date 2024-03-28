@@ -23,5 +23,4 @@ public class Buku03 {
         System.out.println("Pengarang : " + pengarang);
         System.out.println("Stock : " + stock);
     }
-
 }
