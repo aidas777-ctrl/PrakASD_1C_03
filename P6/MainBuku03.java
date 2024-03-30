@@ -31,7 +31,7 @@ public class MainBuku03 {
         listBuku. tampil();
 
         System.out.println("");
-        System.out.println("Data setelah diurutkan secara Asc berdasarkan stock Menggunakan insertion short");
+        System.out.println("Data setelah diurutkan secara Desc berdasarkan stock Menggunakan insertion short");
         listBuku. insertionSort();
         listBuku. tampil();
     }

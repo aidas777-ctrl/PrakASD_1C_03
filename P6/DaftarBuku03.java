@@ -49,7 +49,7 @@ public class DaftarBuku03 {
         for (int i = 1; i < listBk.length; i++) {
             Buku03 temp = listBk[i];
             int j = i;
-            while (j > 0 && listBk[j - 1].stock > temp.stock) {
+            while (j > 0 && listBk[j - 1].stock < temp.stock) { //membandingkan setelah &&
                 listBk[j] = listBk[j - 1];
                 j--;
             }
