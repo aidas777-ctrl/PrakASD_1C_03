@@ -10,11 +10,11 @@ public class BukuMain03 {
         PencarianBuku03 data = new PencarianBuku03();
         int jumBuku = 5;
 
-        Buku03 m = new Buku03(123, "Algoritma", 2019, "Wahyuni", 5);
-        Buku03 m1 = new Buku03(127, "Big Data", 2020, "Susilo", 3);
-        Buku03 m2 = new Buku03(126, "Desain UI", 2021, "Supriadi", 3);
-        Buku03 m3 = new Buku03(111, "Web Programing", 2022, "Pustaka Adi", 2);
-        Buku03 m4 = new Buku03(125, "Etika Mahasiswa", 2023, "Darmawan Adi", 2);
+        Buku03 m = new Buku03(127, "Algoritma", 2019, "Wahyuni", 5);
+        Buku03 m1 = new Buku03(126, "Big Data", 2020, "Susilo", 3);
+        Buku03 m2 = new Buku03(125, "Desain UI", 2021, "Supriadi", 3);
+        Buku03 m3 = new Buku03(123, "Web Programing", 2022, "Pustaka Adi", 2);
+        Buku03 m4 = new Buku03(111, "Etika Mahasiswa", 2023, "Darmawan Adi", 2);
 
         data.tambah(m);
         data.tambah(m1);
