@@ -8,26 +8,19 @@ public class BukuMain03 {
         Scanner s1 = new Scanner(System.in);
 
         PencarianBuku03 data = new PencarianBuku03();
-        int jumBuku = 5;
 
-        System.out.println("--------------------------------------------------------");
-        System.out.println("Masukkan data Buku secara urut dari kodeBuku terkecil");
-        for (int i = 0; i < jumBuku; i++) {
-            System.out.println("--------------------------------------------------------");
-            System.out.print("Kode Buku  \t : ");
-            int kodeBuku = s.nextInt();
-            System.out.print("Judul buku \t : ");
-            String judulBuku = s1.nextLine();
-            System.out.print("Tahun Terbit \t : ");
-            int tahunTerbit = s.nextInt();
-            System.out.print("Pengarang \t : ");
-            String pengarang = s1.nextLine();
-            System.out.print("Stock    \t : ");
-            int stock = s.nextInt();
+        Buku03 m = new Buku03(111, "Algoritma", 2019, "Wahyuni", 5);
+        Buku03 m1 = new Buku03(123, "Big Data", 2020, "Susilo", 3);
+        Buku03 m2 = new Buku03(125, "Desain UI", 2021, "Supriadi", 3);
+        Buku03 m3 = new Buku03(126, "Web Programing", 2022, "Pustaka Adi", 2);
+        Buku03 m4 = new Buku03(127, "Etika Mahasiswa", 2023, "Darmawan Adi", 2);
 
-            Buku03 m = new Buku03(kodeBuku, judulBuku, tahunTerbit, pengarang, stock);
-            data.tambah(m);
-        }
+        data.tambah(m);
+        data.tambah(m1);
+        data.tambah(m2);
+        data.tambah(m3);
+        data.tambah(m4);
+
 
         System.out.println("----------------------------------------------------");
         System.out.println("Data keseluruhan Buku");
@@ -42,6 +35,14 @@ public class BukuMain03 {
         System.out.println("menggunakan sequential Search");
         int posisi = data.FindSeqSearch(cari);
         data.tampilPoisisi(cari, posisi);
-        data.TampilData(cari,posisi);
+        data.TampilData(cari, posisi);
+
+        Buku03 dataBuku = data.FindBuku(cari);
+        if (dataBuku != null) {
+            System.out.println("Data Buku yang ditemukan:");
+            dataBuku.tampilDataBuku();
+        } else {
+            System.out.println("Data Buku tidak ditemukan.");
+        }
     }
 }
