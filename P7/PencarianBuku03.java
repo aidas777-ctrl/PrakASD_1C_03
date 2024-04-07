@@ -1,7 +1,9 @@
 package P7;
 
+import java.util.Arrays;
+
 public class PencarianBuku03 {
-    Buku03 listBk[] = new Buku03[5];
+    Buku03 listBk[] = new Buku03[6];
     int idx;
 
     void tambah(Buku03 m) {
@@ -19,10 +21,10 @@ public class PencarianBuku03 {
         }
     }
 
-    public int FindSeqSearch(int cari) {
+    public int FindSeqSearch(String cari) {
         int posisi = -1;
         for (int j = 0; j < listBk.length; j++) {
-            if (listBk[j].kodeBuku == cari) {
+            if (listBk[j].kodeBuku.equals(cari)) {
                 posisi = j;
                 break;
             }
@@ -31,7 +33,7 @@ public class PencarianBuku03 {
         return posisi;
     }
 
-    public void tampilPoisisi(int x, int pos) {
+    public void tampilPoisisi(String x, int pos) {
         if (pos != -1) {
             System.out.println("data : " + x + " ditemukan pada indeks " + pos);
 
@@ -40,7 +42,7 @@ public class PencarianBuku03 {
         }
     }
 
-    public void TampilData(int x, int pos) {
+    public void tampilData(String x, int pos) {
         if (pos != -1) {
             System.out.println("Kode Buku    \t: " + x);
             System.out.println("Judul        \t: " + listBk[pos].judulBuku);
@@ -52,22 +54,23 @@ public class PencarianBuku03 {
         }
     }
 
-    public Buku03 FindBuku(int cari) {
+    public Buku03 FindBuku(String cari) {
         for (int j = 0; j < listBk.length; j++) {
-            if (listBk[j].kodeBuku == cari) {
+            if (listBk[j].kodeBuku.equals(cari)) {
                 return listBk[j];
             }
         }
         return null;
     }
 
-    public int FindBinarySearch(int cari, int left, int right) {
+    public int FindBinarySearch(String cari, int left, int right) {
         int mid;
         if (right >= left) {
             mid = (left + right) / 2;
-            if (cari == listBk[mid].kodeBuku) {
-                return (mid);
-            } else if (listBk[mid].kodeBuku < cari) {
+            int compare = listBk[mid].kodeBuku.compareTo(cari);
+            if (compare == 0) {
+                return mid;
+            } else if (compare > 0) {
                 return FindBinarySearch(cari, left, mid - 1);
             } else {
                 return FindBinarySearch(cari, mid + 1, right);
@@ -75,4 +78,5 @@ public class PencarianBuku03 {
         }
         return -1;
     }
+
 }
