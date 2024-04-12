@@ -16,7 +16,7 @@ public class Buku03 {
     }
 
     public void tampilDataBuku() {
-        System.out.println("============================");
+        System.out.println("===============================");
         System.out.println("Kode Buku    : " + kodeBuku);
         System.out.println("Judul Buku   : " + judulBuku);
         System.out.println("Tahun Terbit : " + tahunTerbit);
