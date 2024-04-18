@@ -73,15 +73,15 @@ public class Gudang03 {
         }
     }
 
-    public String konversiDesimalKeBiner(int kode) {
+    public String konversiDesimalKeBiner(int kode){
         StackKonversi03 stack = new StackKonversi03();
-        while (kode > 0) {
+        while(kode != 0){
             int sisa = kode % 2;
             stack.push(sisa);
             kode = kode / 2;
         }
         String biner = new String();
-        while (!stack.isEmpty()) {
+        while(!stack.isEmpty()){
             biner += stack.pop();
         }
         return biner;
