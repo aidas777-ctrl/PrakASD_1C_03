@@ -103,4 +103,13 @@ public class Queue03 {
         }
         return dt;
     }
+
+    public void peekRear() {
+        if (!IsEmpty()) {
+            System.out.println("Antrian terbelakang: " + data[rear].norek + " " + data[rear].nama
+                    + " " + data[rear].alamat + " " + data[rear].umur + " " + data[rear].saldo);
+        } else {
+            System.out.println("Queue masih kosong");
+        }
+    }
 }
