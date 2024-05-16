@@ -120,11 +120,11 @@ public class SingleLinkedList03 {
 
         } else {
             Node03 temp = head;
-            while (temp.next == null) {
+            while (temp.next != tail) {
                 temp = temp.next;
             }
             temp.next = null;
-            tail = temp.next;
+            tail = temp;
         }
     }
 
@@ -133,20 +133,20 @@ public class SingleLinkedList03 {
             System.out.println("Linked list masih kosong,"
                     + "tidak dapat dihapus");
         } else {
-            if (head.data == key) {
-                removeFirst();
-            }
             Node03 temp = head;
-            while (temp.next != null) {
-                if (temp.next.data == key) {
+            while (temp != null) {
+                if (temp.data == key && temp == head) {
+                    removeFirst();
+                    break;
+                } else if (temp.next.data == key) {
                     temp.next = temp.next.next;
                     if (temp.next == null) {
                         tail = temp;
                     }
-                    break;
                 }
-                temp = temp.next;
+                break;
             }
+            temp = temp.next;
         }
     }
 
