@@ -11,9 +11,12 @@ public class SingleLinkedList03 {
     void print() {
         if (!isEmpty()) {
             Node03 tmp = head;
+            System.out.println("Daftar Antrian Mahasiswa:");
+            int counter = 1;
             while (tmp != null) {
-                System.out.println("Isi Linked List: NIM = " + tmp.data.NIM + " | Nama = " + tmp.data.nama);
+                System.out.println(counter + ". " + tmp.data.nama + " (NIM : " + tmp.data.NIM + ")");
                 tmp = tmp.next;
+                counter++;
             }
         } else {
             System.out.println("Linked List kosong");
