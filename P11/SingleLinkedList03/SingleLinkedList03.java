@@ -44,23 +44,23 @@ public class SingleLinkedList03 {
     }
 
     void insertAfter(int key, int input) {
-        Node03 ndInput = new Node03(input, head);
+        Node03 ndInput = new Node03(input, null);
         Node03 temp = head;
         do {
             if (temp.data == key) {
                 ndInput.next = temp.next;
                 temp.next = ndInput;
-                if (ndInput.next != null) {
+                if (ndInput.next == null) {
                     tail = ndInput;
-                    break;
                 }
+                break;
             }
             temp = temp.next;
         } while (temp != null);
     }
 
     void insertAt(int index, int input) {
-        // Node03 ndInput = new Node03(input, head);
+        Node03 ndInput = new Node03(input, null);
         if (index < 0) {
             System.out.println("perbaiki logikanya!"
                     + "kalau indeksnya -1 bagaimana??");
@@ -68,12 +68,99 @@ public class SingleLinkedList03 {
             addFirst(input);
         } else {
             Node03 temp = head;
-            for (int i = 0; i < index -1; i++) {
+            for (int i = 0; i < index - 1; i++) {
                 temp = temp.next;
             }
             temp.next = new Node03(input, temp.next);
             if (temp.next.next == null) {
                 tail = temp.next;
+            }
+        }
+    }
+
+    int getData(int index) {
+        Node03 tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
+    }
+
+    int index0f(int key) {
+        Node03 tmp = head;
+        int index = 0;
+        while (tmp != null && tmp.data != key) {
+            tmp = tmp.next;
+            index++;
+        }
+        if (tmp != null) {
+            return index;
+        } else {
+            return -1;
+        }
+    }
+
+    void removeFirst() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong,"
+                    + "tidak dapat dihapus");
+        } else if (head == tail) {
+            head = tail = null;
+        } else {
+            head = head.next;
+        }
+    }
+
+    void removeLast() {
+        if (isEmpty()) {
+            System.out.println("Linked list masih kosong,"
+                    + "tidak dapat dihapus");
+        } else if (head == tail) {
+            head = tail = null;
+
+        } else {
+            Node03 temp = head;
+            while (temp.next == null) {
+                temp = temp.next;
+            }
+            temp.next = null;
+            tail = temp.next;
+        }
+    }
+
+    void remove(int key) {
+        if (isEmpty()) {
+            System.out.println("Linked list masih kosong,"
+                    + "tidak dapat dihapus");
+        } else {
+            if (head.data == key) {
+                removeFirst();
+            }
+            Node03 temp = head;
+            while (temp.next != null) {
+                if (temp.next.data == key) {
+                    temp.next = temp.next.next;
+                    if (temp.next == null) {
+                        tail = temp;
+                    }
+                    break;
+                }
+                temp = temp.next;
+            }
+        }
+    }
+
+    public void removeAt(int index) {
+        if (index == 0) {
+            removeFirst();
+        } else {
+            Node03 temp = head;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            if (temp.next == null) {
+                tail = temp;
             }
         }
     }
