@@ -139,4 +139,33 @@ public class DoubleLinkedLists03 {
             size--;
         }
     }
+
+    public int getFirst() {
+        if (isEmpty()) {
+            System.out.println("Linked List kosong");
+        }
+        return head.data;
+    }
+
+    public int getLast() {
+        if (isEmpty()) {
+            System.out.println("LinkedList kosong");
+        }
+        Node03 tmp = head;
+        while (tmp.next != null) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
+    }
+
+    public int get(int index) {
+        if (isEmpty() || index >= size) {
+            System.out.println("Nilai indeks di luar batas");
+        }
+        Node03 tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
+    }
 }
