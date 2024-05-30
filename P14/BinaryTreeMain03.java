@@ -45,5 +45,9 @@ public class BinaryTreeMain03 {
         System.out.print("PreOrder Traversal : ");
         bt.traversePreOrder(bt.root);
         System.out.println("");
+
+        System.out.println("");
+        System.out.println("Nilai Terkecil pada Binary Tree adalah : " + bt.cariMin());
+        System.out.println("Nilai Terbesar pada Binary Tree adalah : " + bt.cariMaks());
     }
 }

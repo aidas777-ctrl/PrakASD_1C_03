@@ -73,7 +73,22 @@ public class BinaryTree03 {
         return false;
     }
 
+    public int cariMin(){
+        Node03  current = root;
+        while (current.left != null) {
+            current = current.left;
+        }
+        return current.data;
+    }
 
+    public int cariMaks(){
+        Node03  current = root;
+        while (current.right != null) {
+            current = current.right;
+        }
+        return current.data;
+    }
+    
     void traversePreOrder(Node03 node) {
         if (node != null) {
             System.out.print(" " + node.data);
