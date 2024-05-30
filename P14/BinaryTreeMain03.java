@@ -53,5 +53,9 @@ public class BinaryTreeMain03 {
         System.out.println(" ");
         System.out.print("Leaf Node : ");
         bt.cetakLeaf(bt.root);
+
+        System.out.println(" ");
+        int hitungLeaf = bt.hitungLeaf(bt.root);
+        System.out.println("Jumlah Leaf Nodes : " + hitungLeaf);
     }
 }

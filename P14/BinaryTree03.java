@@ -73,16 +73,16 @@ public class BinaryTree03 {
         return false;
     }
 
-    public int cariMin(){
-        Node03  current = root;
+    public int cariMin() {
+        Node03 current = root;
         while (current.left != null) {
             current = current.left;
         }
         return current.data;
     }
 
-    public int cariMaks(){
-        Node03  current = root;
+    public int cariMaks() {
+        Node03 current = root;
         while (current.right != null) {
             current = current.right;
         }
@@ -127,7 +127,7 @@ public class BinaryTree03 {
         return successor;
     }
 
-    public void cetakLeaf(Node03 node){
+    public void cetakLeaf(Node03 node) {
         if (node != null) {
             if (node.left == null && node.right == null) {
                 System.out.print(" " + node.data);
@@ -135,6 +135,16 @@ public class BinaryTree03 {
             cetakLeaf(node.left);
             cetakLeaf(node.right);
         }
+    }
+
+    public int hitungLeaf(Node03 node) {
+        if (node == null) {
+            return 0;
+        }
+        if (node.left == null && node.right == null) {
+            return 1;
+        }
+        return hitungLeaf(node.left) + hitungLeaf(node.right);
     }
 
     void delete(int data) {
