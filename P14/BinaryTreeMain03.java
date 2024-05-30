@@ -49,5 +49,9 @@ public class BinaryTreeMain03 {
         System.out.println("");
         System.out.println("Nilai Terkecil pada Binary Tree adalah : " + bt.cariMin());
         System.out.println("Nilai Terbesar pada Binary Tree adalah : " + bt.cariMaks());
+
+        System.out.println(" ");
+        System.out.print("Leaf Node : ");
+        bt.cetakLeaf(bt.root);
     }
 }

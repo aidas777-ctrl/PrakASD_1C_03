@@ -88,7 +88,7 @@ public class BinaryTree03 {
         }
         return current.data;
     }
-    
+
     void traversePreOrder(Node03 node) {
         if (node != null) {
             System.out.print(" " + node.data);
@@ -125,6 +125,16 @@ public class BinaryTree03 {
             successor.right = del.right;
         }
         return successor;
+    }
+
+    public void cetakLeaf(Node03 node){
+        if (node != null) {
+            if (node.left == null && node.right == null) {
+                System.out.print(" " + node.data);
+            }
+            cetakLeaf(node.left);
+            cetakLeaf(node.right);
+        }
     }
 
     void delete(int data) {
