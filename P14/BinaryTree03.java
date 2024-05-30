@@ -21,7 +21,7 @@ public class BinaryTree03 {
                     if (current.left != null) {
                         current = current.left;
                     } else {
-                        current.left = new Node03(data); 
+                        current.left = new Node03(data);
                         break;
                     }
                 } else if (data > current.data) {
@@ -39,6 +39,26 @@ public class BinaryTree03 {
         }
     }
 
+    void rekursif(Node03 current, int data) {
+        if (current == null) {
+            root = new Node03(data);
+            return;
+        }
+        if (data < current.data) {
+            if (current.left == null) {
+                current.left = new Node03(data);
+            } else {
+                rekursif(current.left, data);
+            }
+        } else if (data > current.data) {
+            if (current.right == null) {
+                current.right = new Node03(data);
+            } else {
+                rekursif(current.right, data);
+            }
+        }
+    }
+
     boolean find(int data) {
         Node03 current = root;
         while (current != null) {
@@ -52,6 +72,7 @@ public class BinaryTree03 {
         }
         return false;
     }
+
 
     void traversePreOrder(Node03 node) {
         if (node != null) {

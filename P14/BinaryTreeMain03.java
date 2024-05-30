@@ -3,15 +3,26 @@ package P14;
 public class BinaryTreeMain03 {
     public static void main(String[] args) {
         BinaryTree03 bt = new BinaryTree03();
-        bt.add(6);
-        bt.add(4);
-        bt.add(8);
-        bt.add(3);
-        bt.add(5);
-        bt.add(7);
-        bt.add(9);
-        bt.add(10);
-        bt.add(15);
+        // bt.add(6);
+        // bt.add(4);
+        // bt.add(8);
+        // bt.add(3);
+        // bt.add(5);
+        // bt.add(7);
+        // bt.add(9);
+        // bt.add(10);
+        // bt.add(15);
+
+        bt.rekursif(bt.root, 6);
+        bt.rekursif(bt.root, 4);
+        bt.rekursif(bt.root, 8);
+        bt.rekursif(bt.root, 3);
+        bt.rekursif(bt.root, 5);
+        bt.rekursif(bt.root, 7);
+        bt.rekursif(bt.root, 9);
+        bt.rekursif(bt.root, 10);
+        bt.rekursif(bt.root, 15);
+       
 
         System.out.print("PreOrder Traversal : ");
         bt.traversePreOrder(bt.root);
