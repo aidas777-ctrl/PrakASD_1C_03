@@ -37,6 +37,7 @@ public class Graph03 {
 
     public void removeEdge(int asal, int tujuan) {
         list[asal].remove(tujuan);
+      
     }
 
     public void removeAllEdges() {
@@ -57,5 +58,14 @@ public class Graph03 {
             }
         }
         System.out.println();
+    }
+
+    public boolean cekTetangga(int asal, int tujuan) {
+        for (int i = 0; i < list[asal].size(); i++) {
+            if (list[asal].get(i) == tujuan) {
+                return true;
+            }
+        }
+        return false;
     }
 }
